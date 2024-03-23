@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Contact.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* 基础重置 */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #0f0f0f; /* 暗色背景 */
+            color: #33ff33; /* 黑客绿 */
+            font-family: 'Courier New', monospace; /* 使用等宽字体 */
+        }
+
+        /* 主内容区使用flex布局，确保内容在页面垂直居中 */
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; /* 水平居中 */
+            text-align: left; /* 文本左对齐 */
+            padding: 20px; /* 添加一些内边距 */
+            min-height: calc(100vh - 60px); /* 减去底部信息栏高度 */
+            line-height: 1.5; /* 增加行高 */
+            max-width: 800px; /* 设置最大宽度 */
+            margin: 0 auto; /* 上下保持0，左右自动调整以达到居中效果 */
+            width: 100%; /* 确保它占满可用空间，但不超过最大宽度 */
+        }
+
+        /* 调整列表样式以适应居中布局 */
+        ul {
+            padding: 0;
+            list-style-position: inside; /* 将列表标记放在内部，以保持左对齐效果 */
+        }
+
+        li {
+            margin-bottom: 10px; /* 列表项间增加间距 */
+        }
+
+        /* 调整链接样式 */
+        a {
+            color: #33ff33;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease-in-out; /* 平滑颜色过渡 */
+        }
+
+        a:hover, a:focus {
+            color: #28a745; /* 鼠标悬停和聚焦时的颜色 */
+            text-decoration: underline; /* 添加下划线 */
+        }
+
+        /* 页脚样式，固定在底部 */
+        .site-info {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #0c0c0c; /* 深色背景 */
+            color: #33ff33; /* 文字颜色 */
+            text-align: center;
+            padding: 10px 0; /* 填充，增加一些空间 */
+            font-size: 14px; /* 调整字体大小 */
+        }
+
+        pre {
+            background-color: #0f0f0f;
+            color: #33ff33;
+            word-wrap: break-word; /* 使得pre文本在必要时可以换行 */
+            white-space: pre-wrap; /* 保持空白符的表现，同时允许文本换行 */
+            text-align: center; /* 居中显示pre内容 */
+            margin: 20px 0; /* 增加与其他内容的间距 */
+        }
+
+        ul {
+            padding-left: 20px; /* 给列表添加一些左填充 */
+        }
+
+        li {
+            margin-bottom: 10px; /* 列表项间增加间距 */
+        }
+
+        /* 调整链接样式 */
+        a {
+            color: #33ff33;
+            text-decoration: underline;
+            font-size: 16px;
+            transition: color 0.3s ease-in-out; /* 平滑颜色过渡 */
+        }
+
+        a:hover, a:focus {
+            color: #28a745; /* 鼠标悬停和聚焦时的颜色 */
+            text-decoration: underline; /* 添加下划线 */
+        }
+
+        /* 增加滚动条美化（可选） */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #333;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #33ff33;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #28a745;
+        }
+    </style>
+</head>
+<body>
+
+<div class="content">
+    <pre>
+  ____            _             _     
+ / ___|___  _ __ | |_ __ _  ___| |_   
+ | |   / _ \| '_ \| __/ _` |/ __| __|  
+ | |__| (_) | | | | || (_| | (__| |_ _ 
+ \____\___/|_| |_|\__\__,_|\___|\__(_)
+    </pre>
+
+    <!-- Contact Information -->
+    <ul>
+        <li>Name: Xinhai Zou</li>
+        <li>Tels:
+            <ul>
+                <li>+86 13261199761 (Chinese)</li>
+                <li>+32 489036909 (Belgian)</li>
+            </ul>
+        </li>
+        <li>Emails:
+            <ul>
+                <li>xinhai.zou@hotmail.com (Personal Related) - <a target=“_blank” href="http://kb.mozillazine.org/Getting_an_SMIME_certificate">S/MIME supported</a></li>
+                <li>xinhai.zou@kuleuven.be (School Related) - <a target=“_blank” href="http://kb.mozillazine.org/Getting_an_SMIME_certificate">S/MIME supported</a></li>
+                <li>xinhai.zou@student.kuleuven.be (School Related) - <a target=“_blank” href="http://kb.mozillazine.org/Getting_an_SMIME_certificate">S/MIME supported</a></li>
+                <li>xinhai.zou@esat.kuleuven.be (Work & Research Related) - PGP key <a href="PGPKey/xinhaizou.asc">(.asc)</a></li>
+            </ul>
+        </li>
+        <li>Postal Address: <br>
+            COSIC, <br>
+            Departement Elektrotechniek (ESAT), <br>
+            KU Leuven, <br>
+            Kasteelpark Arenberg 10 Bus 2452, <br>
+            3001 Leuven-Heverlee, <br>
+            Belgium
+        </li>
+        <li>Website:
+            <ul>
+                <li><a target=“_blank” href="https://www.esat.kuleuven.be/cosic/people/xinhai-zou/" target="_blank">COSIC - Xinhai Zou</a></li>
+                <li><a target=“_blank” href="https://www.linkedin.com/in/xinhai-zou-0aa658221/" target="_blank">Linkedin - Xinhai Zou</a></li>
+                <li><a target=“_blank” href="https://github.com/SeanMWX/" target="_blank">Github - SeanMWX</a></li>
+                <li><a target=“_blank” href="https://blog.seanzou.com/" target="_blank">Blogs for Everything</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<!-- Site info placed at the bottom -->
+<div class="site-info">
+    Xinhai (Sean) Zou 粤ICP备20040781号. <br/>
+    This website does not contain any JavaScript code. <br/>
+</div>
+
+</body>
+</html>
+
