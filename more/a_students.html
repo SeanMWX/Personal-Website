@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Student Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* 基础重置 */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #0f0f0f; /* 暗色背景 */
+            color: #33ff33; /* 黑客绿 */
+            font-family: 'Courier New', monospace; /* 使用等宽字体 */
+        }
+
+        /* 主内容区使用flex布局，确保内容在页面垂直居中 */
+        .content {
+            display: flex;
+            justify-content: center; /* 水平居中 */
+            text-align: left; /* 文本左对齐 */
+            padding: 20px; /* 添加一些内边距 */
+            min-height: calc(100vh - 60px); /* 减去底部信息栏高度 */
+            line-height: 1.5; /* 增加行高 */
+        }
+
+        /* 新增内部容器，用于包裹文本内容 */
+        .inner-content {
+            max-width: 800px; /* 设置最大宽度，限制内容宽度 */
+            width: 100%; /* 宽度自适应，最大不超过800px */
+        }
+
+        /* 页脚样式，固定在底部 */
+        .site-info {
+            position: relative;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #0c0c0c; /* 深色背景 */
+            color: #33ff33; /* 文字颜色 */
+            text-align: center;
+            padding: 10px 0; /* 填充，增加一些空间 */
+            font-size: 14px; /* 调整字体大小 */
+        }
+
+        pre {
+            background-color: #0f0f0f;
+            color: #33ff33;
+            word-wrap: break-word; /* 使得pre文本在必要时可以换行 */
+            white-space: pre-wrap; /* 保持空白符的表现，同时允许文本换行 */
+            text-align: center; /* 居中显示pre内容 */
+            margin: 20px 0; /* 增加与其他内容的间距 */
+        }
+
+        /* 调整链接样式 */
+        a {
+            color: #33ff33;
+            text-decoration: underline;
+            font-size: 16px;
+            transition: color 0.3s ease-in-out; /* 平滑颜色过渡 */
+        }
+
+        a:hover, a:focus {
+            color: #28a745; /* 鼠标悬停和聚焦时的颜色 */
+            text-decoration: underline; /* 添加下划线 */
+        }
+
+        /* 增加滚动条美化（可选） */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #333;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #33ff33;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #28a745;
+        }
+
+        /* 表格样式 */
+        table {
+            border-collapse: collapse; /* 让边框合并为一条线 */
+            margin: 20px 0; /* 表格与其他内容的间距 */
+            font-size: 16px; /* 表格字体大小 */
+            width: 100%; /* 表格宽度 */
+            max-width: 600px; /* 限制表格的最大宽度 */
+        }
+        th, td {
+            border: 1px solid #33ff33; /* 设置边框颜色 */
+            text-align: left; /* 文本左对齐 */
+            padding: 8px; /* 单元格内边距 */
+        }
+        th {
+            background-color: #0c0c0c; /* 表头背景颜色 */
+        }
+        tr:nth-child(even) {
+            background-color: #1a1a1a; /* 为偶数行设置背景色 */
+        }
+
+        /* 增加标题样式 */
+        .section-title {
+            font-weight: bold; /* 加粗 */
+            color: #33ff33; /* 使用与正文相同的颜色，也可以选择稍微变化的颜色 */
+            margin: 30px 0 15px; /* 增加与前后内容的间距 */
+            padding-left: 10px; /* 增加左边距 */
+            border-left: 3px solid #33ff33; /* 左边框，增加视觉效果 */
+            font-size: 20px; /* 增加字体大小 */
+        }
+
+        /* 小标题样式 */
+        .subsection-title {
+            font-weight: bold;
+            color: #33ff33;
+            margin: 20px 0 10px;
+            padding-left: 20px; /* 增加左边距使之与 section-title 区分 */
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="content">
+    <div class="inner-content">
+        <pre>
+ ____  _             _            _      ____       _     _      
+/ ___|| |_ _   _  __| | ___ _ __ | |_   / ___|_   _(_) __| | ___ 
+\___ \| __| | | |/ _` |/ _ \ '_ \| __| | |  _| | | | |/ _` |/ _ \
+ ___) | |_| |_| | (_| |  __/ | | | |_  | |_| | |_| | | (_| |  __/
+   |____/ \__|\__,_|\__,_|\___|_| |_|\__|  \____|\__,_|_|\__,_|\___|   
+        </pre>
+        <p>Welcome!</p>
+        <p>I am Xinhai Zou, I will be your daily supervisor and probably will be with Dave.</p>
+        <p>Interesting ideas? Do not hesitate to <a href="../contact.html">CONTACT ME</a> (xinhai.zou@esat.kuleuven.be); I can make it a master's thesis.</p>
+        <p>Here are some information may helpful during your master's thesis life.</p>
+
+        <p class="section-title">For all students</p>
+
+        <p>If you need a super computer, I will recommend <a target=“_blank” href="https://www.vscentrum.be/">VSC</a>. If you are a KUL master student, you are able to get a VSC account.</p>
+
+
+        <p class="section-title">For AI master students</p>
+        <p>More information about MAI: <a target=“_blank” href="https://wms.cs.kuleuven.be/cs/studeren/master-artificial-intelligence/MAI_SIP">Student Information Page (MAI)</a></p>
+
+        <p class="subsection-title">MAI Milestone</p>
+        <table>
+            <tr>
+              <th>Academic Year</th>
+              <th>Defense</th>
+              <th>Time</th>
+            </tr>
+            <tr>
+              <td>2023-2024</td>
+              <td>Intermediate</td>
+              <td>9:00-18:00: 19th, Feb. - 1st, Mar. (1 hr, 25 mins pre)</td>
+            </tr>
+            <tr>
+                <td>2023-2024</td>
+                <td>Final (Jun.)</td>
+                <td>TBD.</td>
+            </tr>
+            <tr>
+                <td>2023-2024</td>
+                <td>Final (Aug.)</td>
+                <td>TBD.</td>
+            </tr>
+        </table>
+
+        <p class="section-title">For EE master students</p>
+        <p class="section-title">For Summer Intern students</p>
+
+    </div>
+</div>
+
+<!-- Site info placed at the bottom -->
+<div class="site-info">
+    Xinhai (Sean) Zou 粤ICP备20040781号. <br/>
+    This website does not contain any JavaScript code. <br/>
+</div>
+
+</body>
+</html>
