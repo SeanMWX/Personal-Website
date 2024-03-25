@@ -121,6 +121,50 @@
             padding-left: 20px; /* 增加左边距使之与 section-title 区分 */
             font-size: 18px;
         }
+
+        /* 新增链接样式 */
+        .links-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; /* 使链接之间的间距平均分布 */
+            margin: 20px 0; /* 上下间距 */
+        }
+
+        .link-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 22%; /* 使得一行可以放置大约4个链接方块 */
+            background-color: #1a1a1a; /* 方块背景色 */
+            padding: 20px; /* 方块内边距 */
+            margin-bottom: 20px; /* 方块之间的间距 */
+            text-align: center;
+            border: 2px solid #33ff33; /* 方块边框 */
+            color: #33ff33; /* 文字颜色 */
+            text-decoration: none; /* 去掉下划线 */
+            font-size: 16px; /* 字体大小 */
+            transition: background-color 0.3s, color 0.3s; /* 过渡效果 */
+        }
+
+        .link-box:hover {
+            background-color: #33ff33; /* 悬浮背景色 */
+            color: #0f0f0f; /* 悬浮文字颜色 */
+        }
+        
+        /* 复选框 */
+        .checklist {
+            margin: 0 0;
+            color: #33ff33;
+        }
+
+        .checklist label {
+            cursor: pointer;
+        }
+
+        .checklist input[type="checkbox"] {
+            margin-right: 12px;
+        }
+
     </style>
 </head>
 <body>
@@ -137,16 +181,52 @@
         <p>Welcome!</p>
         <p>I am Xinhai Zou, I will be your daily supervisor and probably will be with Dave.</p>
         <p>Interesting ideas? Do not hesitate to <a href="../contact.html">CONTACT ME</a> (xinhai.zou@esat.kuleuven.be); I can make it a master's thesis.</p>
-        <p>Here are some information may helpful during your master's thesis life.</p>
+        <p>Here are some information may be helpful during your master's thesis life.</p>
+
+        <p class="section-title">Useful Links</p>
+        <div class="links-container">
+            <a href="https://toledo.kuleuven.be/" class="link-box" target="_blank">Toledo</a>
+            <a href="https://devhints.io/" class="link-box" target="_blank">Cheatsheets</a>
+            <a href="https://www.kuleuven.be/wieiswie/en/person/search/" class="link-box" target="_blank">Who's who</a>
+            <a href="https://wiki.vtk.be/" class="link-box" target="_blank">VTK Wiki</a>
+        </div>
 
         <p class="section-title">For all students</p>
+        <p class="subsection-title">Check List</p>
 
-        <p>If you need a super computer, I will recommend <a target=“_blank” href="https://www.vscentrum.be/">VSC</a>. If you are a KUL master student, you are able to get a VSC account.</p>
+        <div class="checklist">
+            <label><input type="checkbox" name="checklist" value="building-access"> Request Esat New Building Access</label><br>
+            <label><input type="checkbox" name="checklist" value="esat-account"> Request Esat Account</label><br>
+            <label><input type="checkbox" name="checklist" value="super-computer-account"> Request Super Computer Account - <a href="https://www.vscentrum.be/" target="_blank">VSC</a></label><br>
+        </div>
+
+        <!--
+        <ul>
+            <li>Request Esat New Building Access</li>
+            <li>Request Esat Account</li>
+            <li>Request Super Computer Account - <a href="https://www.vscentrum.be/" target="_blank">VSC</a></li>
+        </ul>
+        -->
+        
+
+        <p>For super computer, you have another option <a href="https://gitlab.esat.kuleuven.be/georgios.kouros/condor-control/" target="_blank">Condor</a>.</p>
+
+        <p class="subsection-title">Some Tips or Small Requirements ;)</p>
+        <ol>
+            <li>Lost? <a href="../contact.html">CONTACT ME</a> (xinhai.zou@esat.kuleuven.be). I always welcome!</li>
+            <li>Previous exams for KUL courses? <a href="https://wiki.vtk.be/" target="_blank">VTK Wiki</a>.</li>
+            <li>LLM models are good assistant, try to use them! E.g., <a href="https://chat.openai.com/" target="_blank">ChatGPT</a>.</li>
+            <li>Please use <a href="https://www.overleaf.com/" target="_blank">Overleaf</a>, it is more efficient and clearer for paper writing.</li>
+            <li>If you do not 100% trust your grammar, just like me ;), use <a href="https://app.grammarly.com/" target="_blank">Grammarly</a>.</li>
+            <li>For me, <a href="https://keras.io/" target="_blank">Keras</a> and <a href="https://pytorch.org/" target="_blank">PyTorch</a> are equal.</li>
+            <li>For intermediate and final master's defense, inform 2 months in advance. </li>
+            <li>New to Linux? <a href="https://linuxsurvival.com/" target="_blank">LinuxSurvival</a> & <a href="https://devhints.io/linux/" target="_blank">Quick cheatsheet for Linux</a>.</li>
+            <li>New to Python? <a href="https://www.w3schools.com/python/" target="_blank">W3Schools-Python</a>.</li>
+            <li>New to Arduino? <a href="https://docs.arduino.cc/learn/starting-guide/getting-started-arduino/" target="_blank">Getting Started with Arduino</a>.</li>
+        </ol>
 
 
         <p class="section-title">For AI master students</p>
-        <p>More information about MAI: <a target=“_blank” href="https://wms.cs.kuleuven.be/cs/studeren/master-artificial-intelligence/MAI_SIP">Student Information Page (MAI)</a></p>
-
         <p class="subsection-title">MAI Milestone</p>
         <table>
             <tr>
@@ -170,6 +250,7 @@
                 <td>TBD.</td>
             </tr>
         </table>
+        <p>More information about MAI: <a target=“_blank” href="https://wms.cs.kuleuven.be/cs/studeren/master-artificial-intelligence/MAI_SIP">Student Information Page (MAI)</a></p>
 
         <p class="section-title">For EE master students</p>
         <p class="section-title">For Summer Intern students</p>
